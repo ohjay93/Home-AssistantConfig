@@ -1,0 +1,124 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 59.8995
+  longitude: 10.6287
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 18
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  temperature_unit: C
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Oslo
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+
+#### Make database delete events and states older than N days
+recorder:
+  db_url: mysql://dbuser:password@localhost/dbname
+  purge_days: 3
+
+# Set Home Assistant login password
+http:
+  api_password: !secret api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - apple_tv
+    
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Use the Config panel
+config:
+
+#### Z-Wave
+zwave:
+  usb_path: /dev/ttyAMA0
+  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.3-py3.4-linux-armv7l.egg/config/
+  polling_interval: 10000
+  debug: 0
+
+  # Text to speech
+tts:
+  platform: google
+  
+#### Groups
+group: !include group.yaml
+
+zone:
+  name: Home
+  latitude: 59.937078
+  longitude: 10.767215
+  radius: 12
+  icon: mdi:home
+
+light:
+  platform: hue
+  host: 192.168.100.3
+
+ #### IOS
+ios:
+ 
+#### Emulated hue
+emulated_hue:
+  type: alexa
+  expose_by_default: true
+  exposed_domains:
+    - switch
+
+#### Input sliders for automation
+input_slider: !include input_slider.yaml
+    
+#### Input_booleans
+input_boolean: !include input_boolean.yaml
+    
+#### Scenes
+scene: !include scene.yaml
+
+#### Automation       
+automation: !include automation.yaml
+ 
+#### Scripts
+script: !include script.yaml
+
+#### Amazon Echo / Alexa
+alexa: !include alexa.yaml
+
+mqtt:
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  keepalive: 60  
+  
+#### Switches
+switch: !include switch.yaml
+
+#### Sensors
+sensor: !include sensor.yaml
+
+#### Binary sensors
+binary_sensor: !include binary_sensor.yaml
+
+#### Media Players
+#media_player:
+ # - platform: apple_tv
+  #  host: 192.168.100.14
+   # login_id: !secret apple_tv_id

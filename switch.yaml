@@ -1,0 +1,29 @@
+  - platform: mqtt 
+    name: "Office table light"
+    state_topic: "ha/switch1"
+    command_topic: "ha/switch1"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false 
+    retain: true
+
+  - platform: mqtt 
+    name: "Office window light"
+    state_topic: "ha/switch2"
+    command_topic: "ha/switch2"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false 
+    retain: true
+
+  - platform: mqtt 
+    name: "Table light"
+    state_topic: "ha/switch3"
+    command_topic: "ha/switch3"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false 
+    retain: true

@@ -1,0 +1,89 @@
+####  Trackers:
+    device_tracker.joachimsiphone6:
+      entity_picture: http://graph.facebook.com/589177278/picture
+    device_tracker.slvisiphone:   
+      entity_picture: http://graph.facebook.com/610007323/picture
+
+#### Switches:
+    
+    switch.fibaro_system_fgwpef_wall_plug_switch_24_0:
+      friendly_name: Office Power
+      icon: mdi:power
+      polling_intensity: 1
+    switch.fibaro_system_fgwpef_wall_plug_switch_28_0:
+      friendly_name: Living Room Power
+      icon: mdi:power
+      polling_intensity: 1
+
+#### Sensors:
+    sensor.xliving_temp:
+      icon: mdi:target
+    sensor.xoffice_temp:
+      icon: mdi:target
+    sensor.xnight_temp:
+      icon: mdi:target
+    sensor.fibaro_system_fgwpef_wall_plug_energy_24_0:
+      friendly_name: Office Usage
+      icon: mdi:chart-line
+    sensor.fibaro_system_fgwpef_wall_plug_power_24_4:
+      friendly_name: Office Drain
+      icon: mdi:flash 
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_29_3:
+      friendly_name: Hall LUX
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_29_1:
+      friendly_name: Hall Temperature
+      icon: mdi:thermometer
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_29_0:
+        friendly_name: Motion Sensor
+    sensor.fibaro_system_fgwpef_wall_plug_energy_28_0:
+      friendly_name: Living Room Usage
+      icon: mdi:chart-line
+    sensor.fibaro_system_fgwpef_wall_plug_power_28_4:
+      friendly_name: Living Room Drain
+      icon: mdi:flash
+    sensor.probe_temperature:
+      icon: mdi:thermometer
+    sensor.probe_humidity:
+      icon: mdi:water-percent
+    sensor.living_room_temperature:
+      icon: mdi:thermometer
+    sensor.living_room_humidity:
+      icon: mdi:water-percent
+    sensor.office_temperature:
+      icon: mdi:thermometer
+    sensor.office_humidity:
+      icon: mdi:water-percent
+    sensor.garden_temperature:
+      icon: mdi:thermometer
+    sensor.bedroom_humidity:
+      icon: mdi:water-percent
+    sensor.bedroom_temperature:
+      icon: mdi:thermometer
+    sensor.bedroom_co2:
+      icon: mdi:gas-cylinder
+    sensor.waqi_sofienbergparken_oslo_norway:
+      icon: mdi:gas-cylinder
+      friendly_name: Sofienbergparken
+
+#### YR sensors:    
+    sensor.yr_humidity:
+      icon: mdi:water-percent
+    sensor.yr_cloudiness:
+      icon: mdi:weather-cloudy
+    sensor.yr_precipitation:
+      friendly_name: Precipitation
+      icon: mdi:weather-rainy
+    sensor.yr_wind_speed:
+      icon: mdi:weather-windy
+    sensor.yr_pressure:
+      icon: mdi:weight
+
+#### Media players:
+#    media_player.apple_tv:
+#        hidden: true
+#    media_player.my_gti9195:
+#        hidden: true
+
+#### HASS sensors:
+    sensor.date__time:
+        hidden: true

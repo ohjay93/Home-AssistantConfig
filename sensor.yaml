@@ -1,0 +1,90 @@
+  - platform: yr
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+      - lowClouds
+      - mediumClouds
+      - highClouds
+      - dewpointTemperature
+
+  - platform: mqtt
+    name: "Office Temperature"
+    state_topic: "sensor/o_temperature"
+    unit_of_measurement: '°'
+    qos: 0
+
+  - platform: mqtt
+    name: "Office Humidity"
+    state_topic: "sensor/o_humidity"
+    unit_of_measurement: '%'
+    qos: 0
+
+  - platform: mqtt
+    name: "Living Room Temperature"
+    state_topic: "sensor/l_temperature"
+    unit_of_measurement: '°'
+    qos: 0
+
+  - platform: mqtt
+    name: "Living Room Humidity"
+    state_topic: "sensor/l_humidity"
+    unit_of_measurement: '%'
+    qos: 0
+
+  - platform: mqtt
+    name: "Garden Temperature"
+    state_topic: "sensor/g_temperature"
+    unit_of_measurement: '°'
+    qos: 0
+
+  - platform: template
+    sensors:
+         xliving_temp:
+           value_template: '{{ states.input_slider.slider1.state }}'
+           friendly_name: 'Living room target'
+           unit_of_measurement: '°'
+           
+  - platform: template
+    sensors:
+         xoffice_temp:
+           value_template: '{{ states.input_slider.slider2.state }}'
+           friendly_name: 'Office target'
+           unit_of_measurement: '°'
+           
+  - platform: template
+    sensors:
+         xnight_temp:
+           value_template: '{{ states.input_slider.slider3.state }}'
+           friendly_name: 'Night target'
+           unit_of_measurement: '°'
+           
+  - platform: time_date
+    display_options:
+       - 'date_time'
+
+  #- platform: command_line
+#    unit_of_measurement: 'ppm'
+    #command: 'bash /home/pi/.homeassistant/withings/withings_co2.sh'
+    #name: 'Bedroom CO2'
+    #scan_interval: 60
+
+  #- platform: command_line
+#   
+    #command: 'bash /home/pi/.homeassistant/withings/withings_temp.sh'
+    #name: 'Bedroom Temperature'
+    #unit_of_measurement: '°'
+    #scan_interval: 60
+
+  - platform: waqi
+    token: 175cbf3b736fb8bd5d63ccf716b0e7596b88868d
+    locations:
+      - oslo
+    stations:
+      - Sofienbergparken, Oslo, Norway

@@ -1,0 +1,14 @@
+  set_alarm:
+    name: Alarm
+    initial: off
+    icon: mdi:security
+
+  thermo_control:
+    name: Nightshift
+#    initial: on
+    icon: mdi:autorenew
+    
+  office_control:
+    name: Automatic lights
+#    initial: on
+    icon: mdi:autorenew

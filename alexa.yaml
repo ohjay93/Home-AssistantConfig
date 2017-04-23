@@ -1,0 +1,69 @@
+  intents:
+    LivingTempIntent:
+      speech:
+        type: plaintext
+        text: >
+          The living room is {{ states.sensor.living_room_temperature.state }}
+    OfficeTempIntent:
+      speech:
+        type: plaintext
+        text: >
+          The office is {{ states.sensor.office_temperature.state }}
+    GardenTempIntent:
+      speech:
+        type: plaintext
+        text: >
+          The forecast is {{ states.sensor.yr_temperature.state }} and the garden is {{ states.sensor.garden_temperature.state }}
+    LivingTargetIntent:
+      speech:
+        type: plaintext
+        text: >
+          The living room target temperature is {{ states.sensor.xliving_temp.state }}
+    OfficeTargetIntent:
+      speech:
+        type: plaintext
+        text: >
+          The office target temperature is {{ states.sensor.xoffice_temp.state }}
+    NightTargetIntent:
+      speech:
+        type: plaintext
+        text: >
+          The nighttime target temperature is {{ states.sensor.xnight_temp.state }}
+    SetLivingRoomTargetIntent:
+      action: 
+        service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.slider1
+          value: '{{ LivingRoomTargetNumber }}'
+      speech:
+        type: plaintext
+        text: >
+          Living room target temperature is now set to {{ LivingRoomTargetNumber }}
+    SetOfficeTargetIntent:
+      action: 
+        service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.slider2
+          value: '{{ OfficeTargetNumber }}'
+      speech:
+        type: plaintext
+        text: >
+          Office target temperature is now set to {{ OfficeTargetNumber }}
+    SetNightTargetIntent:
+      action: 
+        service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.slider3
+          value: '{{ NightTargetNumber }}'
+      speech:
+        type: plaintext
+        text: >
+          Night target temperature is now set to {{ NightTargetNumber }}
+    ActivateSceneIntent:
+      action:
+        service: scene.turn_on
+        data_template:
+          entity_id: scene.{{ Scene | replace(" ", "_") }}
+      speech:
+        type: plaintext
+        text: !include alexa_confirm.yaml 

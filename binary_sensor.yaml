@@ -1,0 +1,7 @@
+  - platform: mqtt
+    name: "Office Motion"
+    state_topic: "sensor/o_motion"
+    device_class: motion
+    payload_on: "on"
+    payload_off: "off"
+    qos: 0

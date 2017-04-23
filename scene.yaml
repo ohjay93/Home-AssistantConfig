@@ -1,0 +1,107 @@
+  - name: Daytime
+    entities:
+      light.ceiling_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+      light.sofa_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+      light.bench_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+      light.tv_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+      light.hall_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+      light.office_light:
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 218, 161]
+        xy_color: [0.403, 0.3895]
+  
+  - name: Evening
+    entities:
+      light.ceiling_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.sofa_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.bench_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.tv_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.hall_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.office_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+  
+  - name: TV
+    entities:
+      light.tv_light: off
+      light.sofa_light: off
+      light.bench_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+      light.ceiling_light:
+        state: on
+        brightness: 153
+        color_temp: 281
+        rgb_color: [228, 196, 144]
+        xy_color: [0.403, 0.3895]
+  
+  - name: Office
+    entities:
+      light.office_light: 
+        state: on
+        brightness: 255
+        color_temp: 362
+        rgb_color: [255, 200, 118]
+        xy_color: [0.457, 0.4098]
+  
+  - name: Office off
+    entities:
+      light.office_light: off       
