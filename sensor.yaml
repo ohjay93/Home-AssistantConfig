@@ -46,23 +46,23 @@
 
   - platform: template
     sensors:
-         xliving_temp:
+         thermostat_temp:
            value_template: '{{ states.input_slider.slider1.state }}'
-           friendly_name: 'Living room target'
+           friendly_name: 'Thermostat'
            unit_of_measurement: '°'
            
   - platform: template
     sensors:
-         xoffice_temp:
+         day_temp:
            value_template: '{{ states.input_slider.slider2.state }}'
-           friendly_name: 'Office target'
+           friendly_name: 'Day'
            unit_of_measurement: '°'
            
   - platform: template
     sensors:
-         xnight_temp:
+         night_temp:
            value_template: '{{ states.input_slider.slider3.state }}'
-           friendly_name: 'Night target'
+           friendly_name: 'Night'
            unit_of_measurement: '°'
            
   - platform: time_date

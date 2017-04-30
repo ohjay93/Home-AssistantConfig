@@ -99,9 +99,9 @@
   hall:
     name: Hall
     entities:
-      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_29_0
-      - sensor.fibaro_system_fgms001_motion_sensor_luminance_29_3
-      - sensor.fibaro_system_fgms001_motion_sensor_temperature_29_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance_30_3
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_30_1
   
   bedroom:
     name: Bedroom
@@ -112,13 +112,13 @@
   thermostats:
     name: Thermostat
     entities:
-      - input_boolean.thermo_control
-      - sensor.xliving_temp
+      - sensor.thermostat_temp
       - input_slider.slider1
-      - sensor.xoffice_temp
+      - sensor.day_temp
       - input_slider.slider2
-      - sensor.xnight_temp
-      - input_slider.slider3
+      - sensor.night_temp
+      - input_slider.slider3     
+      - input_boolean.thermo_control
   
   security:
     name: Security

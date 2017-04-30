@@ -1,21 +1,21 @@
-  - alias: 'Office-temp under slider2 - 0.5'
+  - alias: 'Office-temp under slider1 - 0.5'
     trigger:
       platform: state
       entity_id: sensor.office_humidity
     condition:
     - condition: template
-      value_template: '{{ float(states.sensor.office_temperature.state) < float(states.input_slider.slider2.state) - 0.5 }}'
+      value_template: '{{ float(states.sensor.office_temperature.state) < float(states.input_slider.slider1.state) - 0.5 }}'
     action:
       service: homeassistant.turn_on
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
     
-  - alias: 'Office-temp over slider2'
+  - alias: 'Office-temp over slider1'
     trigger:
       platform: state
       entity_id: sensor.office_humidity
     condition:
     - condition: template
-      value_template: '{{ float(states.sensor.office_temperature.state) > float(states.input_slider.slider2.state) }}'
+      value_template: '{{ float(states.sensor.office_temperature.state) > float(states.input_slider.slider1.state) }}'
     action:
       service: homeassistant.turn_off
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
@@ -45,7 +45,7 @@
   - alias: 'Alarm trigger notification'
     trigger:
       platform: state
-      entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_25_0
+      entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
       to: 'on'
     condition:
     - condition: state
@@ -57,10 +57,10 @@
         title: "Alarm triggered!"
         message: "{{ states.sensor.date__time.state }}"
  
-  - alias: 'Set Living room night temp at 00:30'
+  - alias: 'Set Thermostat night temp at 01:00'
     trigger: 
       platform: time
-      after: "00:30:00" 
+      after: "01:00:00" 
     condition:
     - condition: state
       entity_id: input_boolean.thermo_control
@@ -71,24 +71,10 @@
         entity_id: input_slider.slider1
         value: '{{ states.input_slider.slider3.state }}'
   
-  - alias: 'Set Office night temp at 00:30'
+  - alias: 'Set Thermostat day temp at 06:00'
     trigger: 
       platform: time
-      after: "00:30:00" 
-    condition:
-    - condition: state
-      entity_id: input_boolean.thermo_control
-      state: 'on'
-    action: 
-      service: input_slider.select_value
-      data_template:
-        entity_id: input_slider.slider2
-        value: '{{ states.input_slider.slider3.state }}'
-
-  - alias: 'Set Living room day temp at 07:00'
-    trigger: 
-      platform: time
-      after: "07:00:00" 
+      after: "06:00:00" 
     condition:
     - condition: state
       entity_id: input_boolean.thermo_control
@@ -97,21 +83,8 @@
       service: input_slider.select_value
       data_template:
         entity_id: input_slider.slider1
-        value: 22.0
+        value: '{{ states.input_slider.slider2.state }}'
 
-  - alias: 'Set Office day temp at 07:00'
-    trigger: 
-      platform: time
-      after: "07:00:00" 
-    condition:
-    - condition: state
-      entity_id: input_boolean.thermo_control
-      state: 'on'
-    action: 
-      service: input_slider.select_value
-      data_template:
-        entity_id: input_slider.slider2
-        value: 22.0
       
   - alias: 'Update Available Notifications'
     trigger:
@@ -126,17 +99,17 @@
   - alias: 'Nobody Home - Joachimleft'
     trigger:
       - platform: state
-        entity_id: device_tracker.joachimsiphone6
+        entity_id: device_tracker.joachims_iphone6
         from: 'home' 
         to: 'not_home'  
     condition:
       condition: and
       conditions:
        - condition: state
-         entity_id: device_tracker.joachimsiphone6
+         entity_id: device_tracker.joachims_iphone6
          state: 'not_home'
        - condition: state
-         entity_id: device_tracker.slvisiphone
+         entity_id: device_tracker.slvis_iphone
          state: 'not_home'
     action:
       service: homeassistant.turn_off
@@ -145,17 +118,17 @@
   - alias: 'Nobody Home - Solvileft'
     trigger:
       - platform: state
-        entity_id: device_tracker.slvisiphone
+        entity_id: device_tracker.slvis_iphone
         from: 'home' 
         to: 'not_home'  
     condition:
       condition: and
       conditions:
        - condition: state
-         entity_id: device_tracker.joachimsiphone6
+         entity_id: device_tracker.joachims_iphone6
          state: 'not_home'
        - condition: state
-         entity_id: device_tracker.slvisiphone
+         entity_id: device_tracker.slvis_iphone
          state: 'not_home'
     action:
       service: homeassistant.turn_off
@@ -164,7 +137,7 @@
   - alias: Turn on Hall light when there is movement
     trigger:
       - platform: state
-        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_29_0
+        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
         to: 'on'
     condition:
        - condition: state

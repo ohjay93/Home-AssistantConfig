@@ -1,19 +1,19 @@
   slider1:
-    name: Living room
+    name: Set
 #    initial: 22
     min: 15
     max: 30
     step: 0.5  
     
   slider2:
-    name: Office
+    name: Set
 #    initial: 22
     min: 15
     max: 30
     step: 0.5
     
   slider3:
-    name: Night
+    name: Set
 #    initial: 18
     min: 15
     max: 30

@@ -1,7 +1,7 @@
 ####  Trackers:
-    device_tracker.joachimsiphone6:
+    device_tracker.joachims_iphone6:
       entity_picture: http://graph.facebook.com/589177278/picture
-    device_tracker.slvisiphone:   
+    device_tracker.slvis_iphone:   
       entity_picture: http://graph.facebook.com/610007323/picture
 
 #### Switches:
@@ -16,24 +16,24 @@
       polling_intensity: 1
 
 #### Sensors:
-    sensor.xliving_temp:
+    sensor.thermostat_temp:
       icon: mdi:target
-    sensor.xoffice_temp:
-      icon: mdi:target
-    sensor.xnight_temp:
-      icon: mdi:target
+    sensor.day_temp:
+      icon: mdi:white-balance-sunny
+    sensor.night_temp:
+      icon: mdi:weather-night
     sensor.fibaro_system_fgwpef_wall_plug_energy_24_0:
       friendly_name: Office Usage
       icon: mdi:chart-line
     sensor.fibaro_system_fgwpef_wall_plug_power_24_4:
       friendly_name: Office Drain
       icon: mdi:flash 
-    sensor.fibaro_system_fgms001_motion_sensor_luminance_29_3:
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_30_3:
       friendly_name: Hall LUX
-    sensor.fibaro_system_fgms001_motion_sensor_temperature_29_1:
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_30_1:
       friendly_name: Hall Temperature
       icon: mdi:thermometer
-    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_29_0:
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0:
         friendly_name: Motion Sensor
     sensor.fibaro_system_fgwpef_wall_plug_energy_28_0:
       friendly_name: Living Room Usage
