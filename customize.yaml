@@ -66,6 +66,8 @@
       friendly_name: Sofienbergparken
 
 #### YR sensors:    
+    sensor.yr_symbol:
+      friendly_name: Weather
     sensor.yr_humidity:
       icon: mdi:water-percent
     sensor.yr_cloudiness:

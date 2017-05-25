@@ -95,7 +95,7 @@ input_boolean: !include input_boolean.yaml
 scene: !include scene.yaml
 
 #### Automation       
-automation: !include automation.yaml
+automation: !include automations.yaml
  
 #### Scripts
 script: !include script.yaml

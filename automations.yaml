@@ -1,4 +1,5 @@
-  - alias: 'Office-temp under slider1 - 0.5'
+  - id: Office-temp-under
+    alias: 'Office-temp under slider1 - 0.5'
     trigger:
       platform: state
       entity_id: sensor.office_humidity
@@ -9,7 +10,8 @@
       service: homeassistant.turn_on
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
     
-  - alias: 'Office-temp over slider1'
+  - id: Office-temp-over
+    alias: 'Office-temp over slider1'
     trigger:
       platform: state
       entity_id: sensor.office_humidity
@@ -20,7 +22,8 @@
       service: homeassistant.turn_off
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
 
-  - alias: 'Living room-temp under slider1 - 0.5'
+  - id: Living-temp-under
+    alias: 'Living room-temp under slider1 - 0.5'
     trigger:
       platform: state
       entity_id: sensor.living_room_humidity
@@ -31,7 +34,8 @@
       service: homeassistant.turn_on
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_28_0
       
-  - alias: 'Living room-temp over slider1'
+  - id: Living-temp-over
+    alias: 'Living room-temp over slider1'
     trigger:
       platform: state
       entity_id: sensor.living_room_humidity
@@ -42,7 +46,8 @@
       service: homeassistant.turn_off
       entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_28_0
 
-  - alias: 'Alarm trigger notification'
+  - id: Alarm
+    alias: 'Alarm trigger notification'
     trigger:
       platform: state
       entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
@@ -57,7 +62,8 @@
         title: "Alarm triggered!"
         message: "{{ states.sensor.date__time.state }}"
  
-  - alias: 'Set Thermostat night temp at 01:00'
+  - id: Night-temp
+    alias: 'Set Thermostat night temp at 01:00'
     trigger: 
       platform: time
       after: "01:00:00" 
@@ -71,7 +77,8 @@
         entity_id: input_slider.slider1
         value: '{{ states.input_slider.slider3.state }}'
   
-  - alias: 'Set Thermostat day temp at 06:00'
+  - id: Day-temp
+    alias: 'Set Thermostat day temp at 06:00'
     trigger: 
       platform: time
       after: "06:00:00" 
@@ -84,9 +91,9 @@
       data_template:
         entity_id: input_slider.slider1
         value: '{{ states.input_slider.slider2.state }}'
-
-      
-  - alias: 'Update Available Notifications'
+   
+  - id: Updates
+    alias: 'Update Available Notifications'
     trigger:
       platform: state
       entity_id: updater.updater
@@ -96,7 +103,8 @@
         message: 'A new update for Home Assistant is available.'
         title: "Update now!"
   
-  - alias: 'Nobody Home - Joachimleft'
+  - id: Joachim-left
+    alias: 'Nobody Home - Joachimleft'
     trigger:
       - platform: state
         entity_id: device_tracker.joachims_iphone6
@@ -115,7 +123,8 @@
       service: homeassistant.turn_off
       entity_id:  group.lights  
 
-  - alias: 'Nobody Home - Solvileft'
+  - id: Solvi-left
+    alias: 'Nobody Home - Solvileft'
     trigger:
       - platform: state
         entity_id: device_tracker.slvis_iphone
@@ -134,7 +143,8 @@
       service: homeassistant.turn_off
       entity_id:  group.lights  
   
-  - alias: Turn on Hall light when there is movement
+  - id: Hall-light
+    alias: Turn on Hall light when there is movement
     trigger:
       - platform: state
         entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
@@ -147,7 +157,8 @@
       service: homeassistant.turn_on
       entity_id: script.timed_lamp
       
-  - alias: Turn off Office light when there is no movement for 5 minute
+  - id: Office-light-off
+    alias: Turn off Office light when there is no movement for 5 minute
     trigger:
       - platform: state
         entity_id: binary_sensor.office_motion
@@ -165,7 +176,8 @@
         - switch.office_window_light
         - switch.office_table_light
       
-  - alias: Turn on Office light when there is movement
+  - id: Office-light-on
+    alias: Turn on Office light when there is movement
     trigger:
       - platform: state
         entity_id: binary_sensor.office_motion

@@ -10,13 +10,7 @@
     view: yes
     entities:
       - group.presencer
-
-  view_automation:
-    name: Automation
-    view: yes
-    entities:
-     - group.automation
-     
+    
 #### Actual Groups
 
   default_view:
@@ -28,7 +22,6 @@
       - group.hall
       - group.livingroom
       - group.office
-      - group.presence
       - group.security
       - group.thermostats
       - group.weather
@@ -37,27 +30,7 @@
   notifications:
     name: Notifications
     entities: 
-      - persistent_notification.notification
-      
-  automation:
-    name: Automation
-    entities:
-      - automation.alarm_trigger_notification
-      - automation.living_roomtemp_over_slider1
-      - automation.living_roomtemp_under_slider1__05
-      - automation.officetemp_over_slider2
-      - automation.officetemp_under_slider2__05
-      - automation.set_living_room_day_temp_at_0700
-      - automation.set_living_room_night_temp_at_0030
-      - automation.set_office_day_temp_at_0700
-      - automation.set_office_night_temp_at_0030
-      - automation.turn_on_hall_light_when_there_is_movement
-      - automation.update_available_notifications
-      - configurator.philips_hue
-      - automation.turn_off_office_light_when_there_is_no_movement_for_5_minute
-      - automation.turn_on_office_light_when_there_is_movement
-      - automation.nobody_home__joachimleft
-      - automation.nobody_home__solvileft
+      - persistent_notification.notification   
       
   weather:
     name: Outside

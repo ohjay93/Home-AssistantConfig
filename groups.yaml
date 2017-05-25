@@ -1,0 +1,14 @@
+default_view:
+  entities:
+  - group.hall
+  - group.lights
+  - group.all_switches
+  - group.bedroom
+  - group.livingroom
+  - group.office
+  - group.security
+  - group.thermostats
+  - group.weather
+  - group.notifications
+  name: default_view
+  view: false
