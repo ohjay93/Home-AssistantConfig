@@ -1,4 +1,18 @@
 #### Views   
+  view_all:
+    name: All
+    view: yes
+    entities:
+      - group.lights
+      - group.bedroom
+      - group.hall
+      - group.livingroom
+      - group.office
+      - group.security
+      - group.thermostats
+      - group.weather
+      - group.notifications
+      
   view_scenes:
     name: Scenes
     view: yes
@@ -17,16 +31,20 @@
     view: yes
     entities:
       - group.lights
-      - group.all_switches
-      - group.bedroom
-      - group.hall
-      - group.livingroom
-      - group.office
-      - group.security
-      - group.thermostats
-      - group.weather
       - group.notifications
+      - group.glance
      
+  glance:
+    name: Glance
+    entities: 
+      - persistent_notification.notification
+      - sensor.yr_symbol
+      - sensor.yr_temperature
+      - sensor.garden_temperature
+      - sensor.living_room_temperature
+      - sensor.office_temperature
+      
+      
   notifications:
     name: Notifications
     entities: 
