@@ -1,5 +1,5 @@
 # Home-Assistant
-Current Version: 0.43 
+Current Version: 0.45.1 
 Running on a Raspberry PI 2 Model B  
 Raspbian Jessie 8.0
 Razberry Z-wave controller
@@ -24,6 +24,7 @@ sudo apt-get clean
 ```
 
 ### Install Home Assistant old school-style
+NOTE: Perhaps not use sudo - might prevent dependencies from updating later
 ```
 sudo pip3 install homeassistant
 sudo pip install netdisco
