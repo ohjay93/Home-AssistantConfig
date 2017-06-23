@@ -32,8 +32,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
-  ignore:
-    - apple_tv
+#  ignore:       #Does this prevent the thing from starting up in the night?
+#    - apple_tv
     
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -74,6 +74,8 @@ zone:
 light:
   platform: hue
   host: 192.168.100.3
+  allow_in_emulated_hue: false
+  allow_hue_groups: false
 
  #### IOS
 ios:

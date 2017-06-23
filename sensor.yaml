@@ -17,7 +17,7 @@
   - platform: mqtt
     name: "Office Temperature"
     state_topic: "sensor/o_temperature"
-    unit_of_measurement: '°'
+    unit_of_measurement: '°C'
     qos: 0
 
   - platform: mqtt
@@ -29,7 +29,7 @@
   - platform: mqtt
     name: "Living Room Temperature"
     state_topic: "sensor/l_temperature"
-    unit_of_measurement: '°'
+    unit_of_measurement: '°C'
     qos: 0
 
   - platform: mqtt
@@ -41,7 +41,7 @@
   - platform: mqtt
     name: "Garden Temperature"
     state_topic: "sensor/g_temperature"
-    unit_of_measurement: '°'
+    unit_of_measurement: '°C'
     qos: 0
 
   - platform: template
@@ -49,21 +49,21 @@
          thermostat_temp:
            value_template: '{{ states.input_slider.slider1.state }}'
            friendly_name: 'Thermostat'
-           unit_of_measurement: '°'
+           unit_of_measurement: '°C'
            
   - platform: template
     sensors:
          day_temp:
            value_template: '{{ states.input_slider.slider2.state }}'
            friendly_name: 'Day'
-           unit_of_measurement: '°'
+           unit_of_measurement: '°C'
            
   - platform: template
     sensors:
          night_temp:
            value_template: '{{ states.input_slider.slider3.state }}'
            friendly_name: 'Night'
-           unit_of_measurement: '°'
+           unit_of_measurement: '°C'
            
   - platform: time_date
     display_options:

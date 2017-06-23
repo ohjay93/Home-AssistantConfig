@@ -66,7 +66,7 @@
     alias: 'Set Thermostat night temp at 01:00'
     trigger: 
       platform: time
-      after: "01:00:00" 
+      at: "01:00:00" 
     condition:
     - condition: state
       entity_id: input_boolean.thermo_control
@@ -81,7 +81,7 @@
     alias: 'Set Thermostat day temp at 06:00'
     trigger: 
       platform: time
-      after: "06:00:00" 
+      at: "06:00:00" 
     condition:
     - condition: state
       entity_id: input_boolean.thermo_control

@@ -1,8 +1,10 @@
 ####  Trackers:
     device_tracker.joachims_iphone6:
       entity_picture: http://graph.facebook.com/589177278/picture
+      friendly_name: Joachim
     device_tracker.slvis_iphone:   
       entity_picture: http://graph.facebook.com/610007323/picture
+      friendly_name: Sølvi
 
 #### Switches:
     
