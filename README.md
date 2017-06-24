@@ -1,5 +1,5 @@
 # Home-Assistant
-Current Version: 0.45.1 
+Current Version: 0.47.1 
 Running on a Raspberry PI 2 Model B  
 Raspbian Jessie 8.0
 Razberry Z-wave controller
