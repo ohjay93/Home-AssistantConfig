@@ -241,13 +241,21 @@ http:
 ```
 
 #### Renew Certificate
-```
-cd certbot 
-./certbot-auto renew --quiet --no-self-upgrade --standalone --standalone-supported-challenges http-01
-```
+On the Router:
+Map External port number 443 to Internal port number 443 (instead of 8123)
 
-* Creation date 2016-02-19
-* Renewal date  2017-05-20
+Find any process PID using port  443 and kill it:
+```
+sudo netstat -tulpn
+sudo kill [PID]
+cd letsencrypt
+./letsencrypt-auto certonly --email [my email]  -d [my domain]
+```
+Choose 1: Spin up a temporary webserver (standalone)
+Map External port number 443 to Internal port number 8123 (instead of 443)
+
+* Creation date 2017 July 5
+* Renewal date  2017 October 3
 
 # Useful commands
 ### Start / stop / restart Home Assistant

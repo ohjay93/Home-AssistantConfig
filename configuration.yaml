@@ -124,3 +124,8 @@ binary_sensor: !include binary_sensor.yaml
  # - platform: apple_tv
   #  host: 192.168.100.14
    # login_id: !secret apple_tv_id
+media_player:
+  - platform: samsungtv
+    host: 192.168.100.30
+    mac: 00:26:18:26:43:25
+    port:  8001
