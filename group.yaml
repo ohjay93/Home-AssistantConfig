@@ -44,7 +44,6 @@
       - sensor.living_room_temperature
       - sensor.office_temperature
       
-      
   notifications:
     name: Notifications
     entities: 
@@ -70,9 +69,9 @@
     entities:
       - sensor.living_room_temperature
       - sensor.living_room_humidity
-      - switch.fibaro_system_fgwpef_wall_plug_switch_28_0
-      - sensor.fibaro_system_fgwpef_wall_plug_power_28_4
-      - sensor.fibaro_system_fgwpef_wall_plug_energy_28_0
+      - switch.fibaro_system_fgwpef_wall_plug_switch_2
+      - sensor.fibaro_system_fgwpef_wall_plug_power_2
+      - sensor.fibaro_system_fgwpef_wall_plug_energy_2
       - media_player.apple_tv
       - media_player.samsung_tv_remote
 
@@ -82,18 +81,18 @@
     entities:
       - sensor.office_temperature
       - sensor.office_humidity
-      - switch.fibaro_system_fgwpef_wall_plug_switch_24_0
-      - sensor.fibaro_system_fgwpef_wall_plug_power_24_4
-      - sensor.fibaro_system_fgwpef_wall_plug_energy_24_0
+      - switch.fibaro_system_fgwpef_wall_plug_switch
+      - sensor.fibaro_system_fgwpef_wall_plug_power
+      - sensor.fibaro_system_fgwpef_wall_plug_energy
       - binary_sensor.office_motion
       - input_boolean.office_control
 
   hall:
     name: Hall
     entities:
-      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
-      - sensor.fibaro_system_fgms001_motion_sensor_luminance_30_3
-      - sensor.fibaro_system_fgms001_motion_sensor_temperature_30_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature
   
   bedroom:
     name: Bedroom

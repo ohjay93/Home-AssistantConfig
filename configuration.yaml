@@ -109,6 +109,8 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   keepalive: 60  
+  #needed as of 0.48 ... should not be neccesarry
+  client_id: 1234 
   
 #### Switches
 switch: !include switch.yaml

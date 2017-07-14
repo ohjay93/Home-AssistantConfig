@@ -8,11 +8,11 @@
 
 #### Switches:
     
-    switch.fibaro_system_fgwpef_wall_plug_switch_24_0:
+    switch.fibaro_system_fgwpef_wall_plug_switch:
       friendly_name: Office Power
       icon: mdi:power
       polling_intensity: 1
-    switch.fibaro_system_fgwpef_wall_plug_switch_28_0:
+    switch.fibaro_system_fgwpef_wall_plug_switch_2:
       friendly_name: Living Room Power
       icon: mdi:power
       polling_intensity: 1
@@ -24,23 +24,23 @@
       icon: mdi:white-balance-sunny
     sensor.night_temp:
       icon: mdi:weather-night
-    sensor.fibaro_system_fgwpef_wall_plug_energy_24_0:
+    sensor.fibaro_system_fgwpef_wall_plug_energy:
       friendly_name: Office Usage
       icon: mdi:chart-line
-    sensor.fibaro_system_fgwpef_wall_plug_power_24_4:
+    sensor.fibaro_system_fgwpef_wall_plug_power:
       friendly_name: Office Drain
       icon: mdi:flash 
-    sensor.fibaro_system_fgms001_motion_sensor_luminance_30_3:
+    sensor.fibaro_system_fgms001_motion_sensor_luminance:
       friendly_name: Hall LUX
-    sensor.fibaro_system_fgms001_motion_sensor_temperature_30_1:
+    sensor.fibaro_system_fgms001_motion_sensor_temperature:
       friendly_name: Hall Temperature
       icon: mdi:thermometer
-    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0:
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30:
         friendly_name: Motion Sensor
-    sensor.fibaro_system_fgwpef_wall_plug_energy_28_0:
+    sensor.fibaro_system_fgwpef_wall_plug_energy_2:
       friendly_name: Living Room Usage
       icon: mdi:chart-line
-    sensor.fibaro_system_fgwpef_wall_plug_power_28_4:
+    sensor.fibaro_system_fgwpef_wall_plug_power_2:
       friendly_name: Living Room Drain
       icon: mdi:flash
     sensor.probe_temperature:

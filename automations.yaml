@@ -8,7 +8,7 @@
       value_template: '{{ float(states.sensor.office_temperature.state) < float(states.input_slider.slider1.state) - 0.5 }}'
     action:
       service: homeassistant.turn_on
-      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
+      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch
     
   - id: Office-temp-over
     alias: 'Office-temp over slider1'
@@ -20,7 +20,7 @@
       value_template: '{{ float(states.sensor.office_temperature.state) > float(states.input_slider.slider1.state) }}'
     action:
       service: homeassistant.turn_off
-      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_24_0
+      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch
 
   - id: Living-temp-under
     alias: 'Living room-temp under slider1 - 0.5'
@@ -32,7 +32,7 @@
       value_template: '{{ float(states.sensor.living_room_temperature.state) < float(states.input_slider.slider1.state) - 0.5 }}'
     action:
       service: homeassistant.turn_on
-      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_28_0
+      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_2
       
   - id: Living-temp-over
     alias: 'Living room-temp over slider1'
@@ -44,13 +44,13 @@
       value_template: '{{ float(states.sensor.living_room_temperature.state) > float(states.input_slider.slider1.state) }}'
     action:
       service: homeassistant.turn_off
-      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_28_0
+      entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_2
 
   - id: Alarm
     alias: 'Alarm trigger notification'
     trigger:
       platform: state
-      entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
+      entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30
       to: 'on'
     condition:
     - condition: state
@@ -147,7 +147,7 @@
     alias: Turn on Hall light when there is movement
     trigger:
       - platform: state
-        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30_0
+        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30
         to: 'on'
     condition:
        - condition: state
