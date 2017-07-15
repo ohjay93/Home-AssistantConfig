@@ -86,5 +86,6 @@
     token: 175cbf3b736fb8bd5d63ccf716b0e7596b88868d
     locations:
       - oslo
-    stations:
-      - Sofienbergparken, Oslo, Norway
+# Temporary fix for stations - perhaps remove in 0.49
+#    stations:
+#      - Sofienbergparken, Oslo, Norway

@@ -35,7 +35,7 @@
     sensor.fibaro_system_fgms001_motion_sensor_temperature:
       friendly_name: Hall Temperature
       icon: mdi:thermometer
-    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30:
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor:
         friendly_name: Motion Sensor
     sensor.fibaro_system_fgwpef_wall_plug_energy_2:
       friendly_name: Living Room Usage

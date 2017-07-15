@@ -147,7 +147,7 @@
     alias: Turn on Hall light when there is movement
     trigger:
       - platform: state
-        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_30
+        entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
         to: 'on'
     condition:
        - condition: state
