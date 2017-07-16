@@ -24,6 +24,12 @@
     view: yes
     entities:
       - group.presencer
+
+  view_automations:
+    name: Automations
+    view: yes
+    entities:
+      - group.automations
     
 #### Actual Groups
 
@@ -151,3 +157,20 @@
       - light.office_light
       - switch.office_table_light
       - switch.office_window_light
+
+  automations:
+    name: Automations
+    entities:
+      - automation.alarm_trigger_notification
+      - automation.living_roomtemp_over_slider1
+      - automation.living_roomtemp_under_slider1__05
+      - automation.nobody_home__joachimleft
+      - automation.nobody_home__solvileft
+      - automation.officetemp_over_slider1
+      - automation.officetemp_under_slider1__05
+      - automation.set_thermostat_day_temp_at_0600
+      - automation.set_thermostat_night_temp_at_0100
+      - automation.turn_off_office_light_when_there_is_no_movement_for_5_minute
+      - automation.turn_on_hall_light_when_there_is_movement
+      - automation.turn_on_office_light_when_there_is_movement
+      - automation.update_available_notifications

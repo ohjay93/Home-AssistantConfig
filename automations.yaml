@@ -173,8 +173,8 @@
       service: homeassistant.turn_off
       entity_id: 
         - light.office
-        - switch.office_window_light
-        - switch.office_table_light
+        #- switch.office_window_light
+        #- switch.office_table_light
       
   - id: Office-light-on
     alias: Turn on Office light when there is movement
@@ -190,5 +190,5 @@
       service: homeassistant.turn_on
       entity_id: 
         - light.office
-        - switch.office_window_light
-        - switch.office_table_light
+        #- switch.office_window_light
+        #- switch.office_table_light
