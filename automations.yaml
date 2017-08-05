@@ -171,8 +171,7 @@
          state: 'on'
     action:
       service: homeassistant.turn_off
-      entity_id: 
-        - light.office
+      entity_id: light.office_light
         #- switch.office_window_light
         #- switch.office_table_light
       
@@ -188,7 +187,6 @@
         state: 'on'
     action:
       service: homeassistant.turn_on
-      entity_id: 
-        - light.office
+      entity_id: light.office_light
         #- switch.office_window_light
         #- switch.office_table_light
